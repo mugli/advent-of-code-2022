@@ -37,6 +37,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	defer f.Close()
+
 	sc := bufio.NewScanner(f)
 
 	var stacks []stack
